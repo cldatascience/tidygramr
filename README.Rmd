@@ -1,0 +1,67 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# tidygramr
+
+`tidygramr` is a collection of utility functions based on the [tidytext](https://cran.r-project.org/package=tidytext) package. The goal of `tidygramr` is to clean text and to prepare tidy n-gram models. 
+
+**License:** [MIT](https://opensource.org/licenses/MIT)
+
+## Installation
+
+You can install `tidygramr` from github using [devtools](https://cran.r-project.org/package=devtools):
+
+```{r gh-installation, eval = FALSE}
+library(devtools)
+install_github("cldatascience/tidygramr")
+```
+
+## Examples
+
+Here are some basic examples outlining how to create n-gram models from
+Jane Austen's works (see 
+[janeaustenr](https://cran.r-project.org/package=janeaustenr)).
+These examples replicate examples in the book
+[Tidy Text Mining with R](http://tidytextmining.com/ngrams.html), 
+but make use of utility functions in `tidygramr` to obtain the same results.
+
+Create n-gram models:
+
+```{r example1, warning=FALSE}
+library(janeaustenr)
+library(tidygramr)
+unigrams <- create_ngrams(austen_books(), "unigram")
+bigrams <- create_ngrams(austen_books(), "bigram")
+trigrams <- create_ngrams(austen_books(), "trigram")
+```
+
+Create a table of bigram frequencies (stop words removed):
+
+```{r example2, warning=FALSE}
+library(tidytext)
+library(janeaustenr)
+library(tidygramr)
+bigrams <- create_ngrams(austen_books(), "bigram", stopwords=stop_words)
+bigram_freqs <- count_ngrams(bigrams, doc_title="book")
+head(bigram_freqs)
+```
+
+Calculate tf-idf of bigrams (stop words removed):
+
+```{r example3, warning=FALSE}
+library(tidytext)
+library(janeaustenr)
+library(tidygramr)
+bigrams <- create_ngrams(austen_books(), "bigram", stopwords=stop_words)
+bigram_tfidf <- create_tfidf(bigrams, doc_title="book")
+head(bigram_tfidf)
+```
+
+For more information on tidy text mining, please see the excellent
+[Tidy Text Mining with R](http://tidytextmining.com/ngrams.html).

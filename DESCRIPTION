@@ -1,0 +1,23 @@
+Package: tidygramr
+Type: Package
+Title: Clean Text and Create Tidy n-grams Using Tools such as 'tidytext'
+Version: 0.1.0
+Author: C.L.
+Maintainer: C.L. <cl.datascience@gmail.com>
+Description: Clean text and prepare n-grams using tools such as 'tidytext'.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    tidytext,
+    ggplot2,
+    tidyr,
+    topicmodels,
+    ggdendro,
+    tm,
+    testthat,
+    magrittr
+Suggests:
+    janeaustenr
+RoxygenNote: 6.0.1
