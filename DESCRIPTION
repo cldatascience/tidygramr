@@ -13,11 +13,7 @@ Imports:
     tidytext,
     ggplot2,
     tidyr,
-    topicmodels,
-    ggdendro,
-    tm,
-    testthat,
-    magrittr
+    testthat
 Suggests:
     janeaustenr
 RoxygenNote: 6.0.1
