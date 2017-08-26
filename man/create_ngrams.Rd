@@ -27,5 +27,4 @@ library(tidytext)
 unigrams <- create_ngrams(austen_books(),"unigram")
 stopped <- create_ngrams(austen_books(),"unigram",stopwords=stop_words)
 
-
 }

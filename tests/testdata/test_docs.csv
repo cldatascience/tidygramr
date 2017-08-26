@@ -1,3 +1,8 @@
 title,text
 Book 2,"Some sample text, arranged into sentences. Some other text 1234."
 Book 1,"Some sample text, arranged into sentences. Some other text 1234."
+Tweet 1,"Testing Twitter text #hellotwitter #holatwitter #horatwitter"
+Tweet 2,"@myhandle Testing Twitter text #hellotwitter #holatwitter #horatwitter"
+Tweet 3,"@testbob @myhandle more Twitter text #hellotwitter"
+Tweet 4,"@testalice @myhandle more Twitter text #holatwitter"
+Tweet 5,"@testbob @myhandle more Twitter text #hellotwitter"
