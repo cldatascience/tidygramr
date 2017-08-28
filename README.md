@@ -1,8 +1,8 @@
 README
 ================
 
-tidygramr [![Build Status](https://travis-ci.org/cldatascience/tidygramr.svg?branch=master)](https://travis-ci.org/cldatascience/tidygramr)
-===========================================================================================================================================
+tidygramr [![Build Status](https://travis-ci.org/cldatascience/tidygramr.svg?branch=master)](https://travis-ci.org/cldatascience/tidygramr) [![Codecov branch](https://img.shields.io/codecov/c/github/cldatascience/tidygramr/master.svg)](https://img.shields.io/codecov/c/github/cldatascience/tidygramr)
+============================================================================================================================================================================================================================================================================================================
 
 `tidygramr` is a collection of utility functions based on the [tidytext](https://cran.r-project.org/package=tidytext) package. The goal of `tidygramr` is to clean text and to prepare tidy n-gram models.
 
