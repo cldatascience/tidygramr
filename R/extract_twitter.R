@@ -17,7 +17,7 @@
 #' \dontrun{
 #' tweets <- read.csv("tweets.csv", header=FALSE)
 #' hashtags <- extract_hashtags(tweets)
-#' handles <- extract_hashtags(tweets,tag="handle)
+#' handles <- extract_hashtags(tweets,tag="handle")
 #' }
 #'
 #' @export

@@ -20,3 +20,11 @@ A function to create a unigram model of hashtags/handles from
 a tidy data frame of Twitter data, and is a convenience function based
 around tidytext functions
 }
+\examples{
+\dontrun{
+tweets <- read.csv("tweets.csv", header=FALSE)
+hashtags <- extract_hashtags(tweets)
+handles <- extract_hashtags(tweets,tag="handle")
+}
+
+}
