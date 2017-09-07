@@ -30,9 +30,9 @@ extract_twitter <- function(corpus, tag="hashtag"){
                                     pattern = unnest_reg)
   
   if (tag=="hashtag") {
-    ngrams <- dplyr::filter(ngrams, grepl("^#",ngram))
+    ngrams <- dplyr::filter(ngrams, grepl("^#\\w",ngram))
   } else if (tag=="handle") {
-    ngrams <- dplyr::filter(ngrams, grepl("^@",ngram))
+    ngrams <- dplyr::filter(ngrams, grepl("^@\\w",ngram))
   } else {
     stop("extract_twitter expects value of tag to be `hashtag' or `handle'")
   }
