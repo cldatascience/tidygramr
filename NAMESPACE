@@ -2,6 +2,7 @@
 
 export(clean_corpus)
 export(count_ngrams)
+export(create_dtm)
 export(create_ngrams)
 export(create_tfidf)
 export(extract_twitter)
@@ -10,4 +11,5 @@ importFrom(dplyr,filter)
 importFrom(dplyr,mutate)
 importFrom(tidyr,separate)
 importFrom(tidytext,bind_tf_idf)
+importFrom(tidytext,cast_dtm)
 importFrom(tidytext,unnest_tokens)
