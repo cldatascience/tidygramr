@@ -23,7 +23,7 @@
 #' }
 #'
 #' @import dplyr
-#' @importFrom tidytext cast_dtm unnest_tokens
+#' @import tidytext
 #'
 #' @export
 create_dtm <- function(corpus, stopwords, doc_title="title"){
