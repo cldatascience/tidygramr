@@ -12,6 +12,7 @@
 #' @return A data frame of a document term matrix.
 #'
 #' @examples
+#' \dontrun{
 #' library(janeaustenr)
 #' library(tidytext)
 #' books <- data.frame(title = c("Book A", "Book B", "Book C"), 
@@ -19,6 +20,7 @@
 #'                     stringsAsFactors=FALSE)
 #' book_dtm <- create_dtm(books)
 #' book_dtm_1 <- create_dtm(books,stopwords=stop_words)
+#' }
 #'
 #' @import dplyr
 #' @importFrom tidytext cast_dtm unnest_tokens
