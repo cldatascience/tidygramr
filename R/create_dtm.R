@@ -12,15 +12,12 @@
 #' @return A data frame of a document term matrix.
 #'
 #' @examples
-#' \dontrun{
-#' library(janeaustenr)
 #' library(tidytext)
 #' books <- data.frame(title = c("Book A", "Book B", "Book C"), 
 #'                     text = c("Once upon a time", "A long time ago", "In a land far away"),
 #'                     stringsAsFactors=FALSE)
 #' book_dtm <- create_dtm(books)
 #' book_dtm_1 <- create_dtm(books,stopwords=stop_words)
-#' }
 #'
 #' @import dplyr
 #' @import tidytext
