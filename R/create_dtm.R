@@ -6,23 +6,23 @@
 #' input to machine learning tasks
 #'
 #' @param corpus A data frame containing columns for title and text
-#' @param doc_title The column name containing document title
 #' @param stopwords A data frame containing stop words
+#' @param doc_title The column name containing document title
 #'
 #' @return A data frame of a document term matrix.
 #'
 #' @examples
-#' \dontrun{
 #' library(tidytext)
 #' books <- data.frame(title = c("Book A", "Book B", "Book C"), 
-#'                     text = c("Once upon a time", "A long time ago", "In a land far away"),
+#'                     text = c("Once upon a time", "A long time ago", 
+#'                     "In a land far away"),
 #'                     stringsAsFactors=FALSE)
 #' book_dtm <- create_dtm(books)
 #' book_dtm_1 <- create_dtm(books,stopwords=stop_words)
-#' }
 #'
 #' @import dplyr
 #' @import tidytext
+#' @import tm
 #'
 #' @export
 create_dtm <- function(corpus, stopwords, doc_title="title"){
