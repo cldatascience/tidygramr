@@ -2,12 +2,10 @@
 
 export(clean_corpus)
 export(count_ngrams)
-export(create_dtm)
 export(create_ngrams)
 export(create_tfidf)
 export(extract_twitter)
 import(dplyr)
-import(tidytext)
 importFrom(dplyr,filter)
 importFrom(dplyr,mutate)
 importFrom(tidyr,separate)
