@@ -4,12 +4,14 @@
 \alias{create_dtm}
 \title{Create a document-term matrix}
 \usage{
-create_dtm(corpus, stopwords, doc_title = "title")
+create_dtm(corpus, filterwords, stop = TRUE, doc_title = "title")
 }
 \arguments{
 \item{corpus}{A data frame containing columns for title and text}
 
-\item{stopwords}{A data frame containing stop words}
+\item{filterwords}{A data frame containing words to filter on}
+
+\item{stop}{A boolean denoting whether to use filterwords as top words}
 
 \item{doc_title}{The column name containing document title}
 }
@@ -30,7 +32,7 @@ books <- data.frame(title = c("Book A", "Book B", "Book C"),
                     "In a land far away"),
                     stringsAsFactors=FALSE)
 book_dtm <- create_dtm(books)
-book_dtm_1 <- create_dtm(books,stopwords=stop_words)
+book_dtm_1 <- create_dtm(books,filterwords=stop_words)
 }
 
 }
