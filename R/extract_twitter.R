@@ -23,11 +23,8 @@
 #' @export
 extract_twitter <- function(corpus, tag="hashtag"){
   ngram <- text <- NULL
-
-  unnest_reg <- "([^A-Za-z_\\d#@']|'(?![A-Za-z_\\d#@]))"
-
-  ngrams <- tidytext::unnest_tokens(corpus, ngram, text, token = "regex",
-                                    pattern = unnest_reg)
+  
+  ngrams <- tidytext::unnest_tokens(corpus, ngram, text, token = "regex")
   
   if (tag=="hashtag") {
     ngrams <- dplyr::filter(ngrams, grepl("^#\\w",ngram))
@@ -36,6 +33,6 @@ extract_twitter <- function(corpus, tag="hashtag"){
   } else {
     stop("extract_twitter expects value of tag to be `hashtag' or `handle'")
   }
-
+  
   return(ngrams)
 }
