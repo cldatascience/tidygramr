@@ -45,14 +45,14 @@ test_that("creating a document term matrix with selected features", {
                                "In a land far away"),
                       stringsAsFactors=FALSE)
   
-  features <- data.frame(word = c("once","far","away"))
+  features <- data.frame(word = c("once","far","away","unexpected"))
   
   if(require("tm", quietly = TRUE)) {
     if(require("tidytext", quietly = TRUE)) {
       dtm <- create_dtm(books, filterwords=features, stop=FALSE)
       
       # Expect 5 columns, for id and words
-      expect_equal(length(dtm),5)
+      expect_equal(length(dtm),6)
       
       # Expect 3 rows, one for each book
       expect_equal(nrow(dtm),3)

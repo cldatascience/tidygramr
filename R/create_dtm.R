@@ -35,10 +35,19 @@ create_dtm <- function(corpus, filterwords,
   ngrams <- tidytext::unnest_tokens(corpus, word, text)
   
   if (!missing(filterwords)){
+    filterwords$word <- as.character(filterwords$word)
+    
     if(stop==TRUE){
       ngrams <- dplyr::filter(ngrams, !word %in% filterwords$word)
     } else {
       ngrams <- dplyr::filter(ngrams, word %in% filterwords$word)
+      
+      # Case: words outside of the vocabulary
+      # If there are some filterwords to be included as features
+      # that do not exist in the documents, still include them in dtm
+      outside <- anti_join(filterwords,ngrams,by="word")
+      outside <- dplyr::mutate(outside, title="dummy_doc")
+      ngrams <- rbind(ngrams,outside)
     }
   }
   
