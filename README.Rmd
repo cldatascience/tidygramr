@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # tidygramr [![Build Status](https://travis-ci.org/cldatascience/tidygramr.svg?branch=master)](https://travis-ci.org/cldatascience/tidygramr) [![Codecov branch](https://img.shields.io/codecov/c/github/cldatascience/tidygramr/master.svg)](https://img.shields.io/codecov/c/github/cldatascience/tidygramr)
 
-`tidygramr` is a collection of utility functions based on the [tidytext](https://cran.r-project.org/package=tidytext) package. The goal of `tidygramr` is to clean text and to prepare tidy n-gram models. 
+`tidygramr` is a collection of utility functions based on the [tidytext](https://cran.r-project.org/package=tidytext) package. The goal of `tidygramr` is to clean text and to prepare tidy n-gram models. The package is mainly based on examples from the `tidytext` package and related documentation.
 
 **License:** [MIT](https://opensource.org/licenses/MIT)
 
